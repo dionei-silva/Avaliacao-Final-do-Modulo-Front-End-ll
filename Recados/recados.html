@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./recados.css" />
+    <title>Recados</title>
+  </head>
+  <body>
+    <main>
+      <section class="container-box">
+        <h1>Página de Recados hospitalares</h1>
+        <button onclick="sair()" class="button-vermelho-sair">Sair</button>
+        <form onsubmit="return false">
+          <input
+            maxlength="20"
+            id="descricaoUsuario"
+            type="text"
+            placeholder="Descricao"
+          />
+          <input
+            maxlength="40"
+            id="detalhamentoUsuario"
+            type="text"
+            placeholder="Detalhamento"
+          />
+          <label for="descricao"></label>
+          <button onclick="listarRecados()" id="salvar" class="button-azul">
+            Salvar
+          </button>
+        </form>
+        <hr />
+
+        <ol>
+          <li>
+            <div id="listarRecados"></div>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./recados.js"></script>
+  </body>
+</html>

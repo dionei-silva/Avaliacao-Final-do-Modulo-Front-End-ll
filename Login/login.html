@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div
+      class="container-fluid vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="row w-100 justify-content-center align-items-center">
+        <div class="col-12 col-lg-4 bg-white border p-5 rounded">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-12 my-5">
+                <h4 class="display-6">Pagina de Recados Hospitalares</h4>
+              </div>
+
+              <form id="div-login" class="needs-validation" novalidate>
+                <div class="col-12 my-2">
+                  <div class="form-floating mb-3 form-group">
+                    <input
+                      required
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder=""
+                    />
+                    <label for="email">Email</label>
+                    <div class="valid-feedback">
+                      A E-mail preenchido corresponde ao necessario!
+                    </div>
+                    <div class="invalid-feedback">
+                      A E-mail preenchido NÃO corresponde ao necessario!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 my-2">
+                  <div class="form-floating mb-3 form-group">
+                    <input
+                      required
+                      type="password"
+                      class="form-control"
+                      id="senha"
+                      placeholder=""
+                    />
+                    <label for="password">Senha</label>
+                    <div class="valid-feedback">
+                      A Senha preenchida corresponde ao necessario!
+                    </div>
+                    <div class="invalid-feedback">
+                      A Senha preenchida NÃO corresponde ao necessario!
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="col-12">
+                    <button
+                      onclick="encontrarContato()"
+                      class="btn btn-primary"
+                    >
+                      LOGAR
+                    </button>
+                  </div>
+                  <div class="col-12">
+                    <p class="mt-5">
+                      Ainda Não Possui cadastro?
+                      <span
+                        ><a href="/Cadastro/cadastro.html"
+                          ><strong>INSCREVA-SE</strong></a
+                        ></span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>
