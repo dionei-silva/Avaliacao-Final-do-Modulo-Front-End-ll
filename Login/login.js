@@ -2,6 +2,9 @@ let usuario = document.getElementById("email");
 let senha = document.getElementById("senha");
 const divForm = document.getElementById("div-login");
 
+const toastElement = document.getElementById("toast-login");
+const toastLogin = new bootstrap.Toast(toastElement);
+
 divForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -24,7 +27,8 @@ function encontrarContato() {
   );
 
   if (encontrarNome) window.location.href = "../Recados/recados.html";
-  else return; /* alert("Email e senha Invalidos. Tente novamente!!"); */
+  else
+    return mostrarAlerta("danger", "Email ou senha Invalidos. Tente novamente");
 
   let usuarioLogado = {
     email: usuario.value,
@@ -32,4 +36,18 @@ function encontrarContato() {
   };
 
   localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
+}
+
+function mostrarAlerta(tipo, mensagem) {
+  toastElement.classList.add(`text-bg-${tipo}`);
+
+  const espacoMensagem = document.getElementById("espaco-mensagem");
+  espacoMensagem.innerHTML = mensagem;
+
+  toastLogin.show();
+
+  setTimeout(() => {
+    toastLogin.hide();
+    toastElement.classList.remove(`text-bg-${tipo}`);
+  }, 5000);
 }

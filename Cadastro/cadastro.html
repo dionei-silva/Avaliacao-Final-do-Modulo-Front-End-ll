@@ -12,7 +12,7 @@
     <div
       class="container-fluid vh-100 d-flex justify-content-center align-items-center"
     >
-      <div class="row justify-content-center align-items-center h-100">
+      <div class="row w-100 justify-content-center align-items-center">
         <div class="col-12 col-lg-4 bg-white p-5 border rounded">
           <div class="container">
             <div class="row text-center">
@@ -25,7 +25,7 @@
                     type="email"
                     class="form-control"
                     id="cadastro-usuario"
-                    placeholder="Digite seu email"
+                    placeholder=""
                   />
                   <label for="floatingInput">Email</label>
                 </div>
@@ -36,7 +36,7 @@
                     type="password"
                     class="form-control"
                     id="cadastro-senha"
-                    placeholder="Digite a sua senha"
+                    placeholder=""
                   />
                   <label for="floatingPassword">Senha</label>
                 </div>
@@ -47,18 +47,18 @@
                     type="password"
                     class="form-control"
                     id="repete-senha"
-                    placeholder="Repita a sua senha"
+                    placeholder=""
                   />
                   <label for="floatingPassword">Confirme sua Senha</label>
                 </div>
               </div>
               <div class="row">
-                <div class="col-12 my-2">
+                <div class="col-6 my-2">
                   <button onclick="cadastrar()" class="btn btn-primary">
                     CADASTRAR
                   </button>
                 </div>
-                <div class="col-12 my-2">
+                <div class="col-6 my-2">
                   <button onclick="sair()" class="btn btn-primary">
                     RETORNAR
                   </button>
@@ -67,6 +67,27 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div
+      id="toast-cadastro"
+      class="toast align-items-center text-white border-0 toast-position"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body" id="espaco-mensagem">
+          <!--  AQUI VEM PELO JS -->
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
       </div>
     </div>
 

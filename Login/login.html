@@ -12,8 +12,11 @@
     <div
       class="container-fluid vh-100 d-flex justify-content-center align-items-center"
     >
-      <div class="row w-100 justify-content-center align-items-center">
-        <div class="col-12 col-lg-4 bg-white border p-5 rounded">
+      <div
+        id="animacao"
+        class="row w-100 justify-content-center align-items-center"
+      >
+        <div class="col-12 col-lg-6 bg-white border p-5 rounded">
           <div class="container">
             <div class="row text-center">
               <div class="col-12 my-5">
@@ -63,7 +66,7 @@
                   <div class="col-12">
                     <button
                       onclick="encontrarContato()"
-                      class="btn btn-primary"
+                      class="btn btn-primary rounded py-1"
                     >
                       LOGAR
                     </button>
@@ -73,7 +76,7 @@
                       Ainda Não Possui cadastro?
                       <span
                         ><a href="/Cadastro/cadastro.html"
-                          ><strong>INSCREVA-SE</strong></a
+                          ><strong>CADASTRE-SE</strong></a
                         ></span
                       >
                     </p>
@@ -86,6 +89,26 @@
       </div>
     </div>
 
+    <!-- TOAST -->
+    <div
+      id="toast-login"
+      class="toast align-items-center text-white border-0 toast-position"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body" id="espaco-mensagem">
+          <!-- AQUI VEM PELO JS -->
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./login.js"></script>
   </body>

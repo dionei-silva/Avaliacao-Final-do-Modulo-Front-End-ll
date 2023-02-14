@@ -10,36 +10,124 @@
   </head>
   <body>
     <main>
-      <section class="container-box">
-        <h1>Página de Recados hospitalares</h1>
-        <button onclick="sair()" class="button-vermelho-sair">Sair</button>
-        <form onsubmit="return false">
-          <input
-            maxlength="20"
-            id="descricaoUsuario"
-            type="text"
-            placeholder="Descricao"
-          />
-          <input
-            maxlength="40"
-            id="detalhamentoUsuario"
-            type="text"
-            placeholder="Detalhamento"
-          />
-          <label for="descricao"></label>
-          <button onclick="listarRecados()" id="salvar" class="button-azul">
-            Salvar
-          </button>
-        </form>
-        <hr />
+      <section
+        class="mt-5 container-fluid vh-100 d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="bg-white h-100 row mt-3 rounded">
+          <div class="col-12 bg-white border p-5 rounded">
+            <div class="d-flex justify-content-end">
+              <button onclick="sair()" class="btn btn-danger">Sair</button>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+              <h1 class="display-6">Página de Recados hospitalares</h1>
+            </div>
+            <form onsubmit="return false">
+              <div class="input-group mb-1">
+                <input
+                  id="descricaoUsuario"
+                  maxlength="20"
+                  type="text"
+                  placeholder="Descricão"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  id="detalhamentoUsuario"
+                  maxlength="40"
+                  type="text"
+                  placeholder="Detalhamento"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                />
+              </div>
+              <button
+                onclick="listarRecados()"
+                id="salvar"
+                class="btn btn-primary"
+              >
+                Salvar
+              </button>
+            </form>
+            <hr />
 
-        <ol>
-          <li>
-            <div id="listarRecados"></div>
-          </li>
-        </ol>
+            <ol class="list-unstyled">
+              <li>
+                <div id="listarRecados"></div>
+              </li>
+            </ol>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- TOAST -->
+
+    <div
+      id="toast-recados"
+      class="toast align-items-center text-white border-0 toast-position"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body" id="espaco-mensagem">
+          <!-- AQUI VEM PELO JS -->
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Modal Excluir -->
+    <div
+      class="modal fade"
+      id="modal-excluir"
+      tabindex="-1"
+      aria-labelledby="titleModalDelete"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="titleModalDelete">
+              Excluir Contato
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Tem certeza que realizar a exclusão? Esta operação é definitiva.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-danger" id="btn-delete">
+              Excluir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./recados.js"></script>
   </body>
