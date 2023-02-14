@@ -16,3 +16,7 @@ body {
   right: 40px;
   top: 20px;
 }
+
+button {
+  width: 100px;
+}
